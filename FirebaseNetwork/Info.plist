@@ -2,28 +2,28 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb{your-app-id}</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>fb203891883400211</string>
-    <key>FacebookDisplayName</key>
-    <string>Firebase Social Network</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>FirebaseNetwork needs access to your photos to set your profile picture</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb203891883400211</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>203891883400211</string>
+	<key>FacebookDisplayName</key>
+	<string>Firebase Social Network</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>FirebaseNetwork needs access to your photos to set your profile picture</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -62,6 +62,11 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>MarkSans-Medium.ttf</string>
+		<string>MarkSans.ttf</string>
 	</array>
 </dict>
 </plist>

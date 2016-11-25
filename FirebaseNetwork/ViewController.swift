@@ -23,6 +23,33 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func fbBtnPressed(_ sender: UIButton) {
+        let facebookLogin = FBSDKLoginManager()
+        
+        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+            if error != nil {
+                print("RESULT: Unable to authenticate with Facebook - \(error)")
+                
+            } else if result?.isCancelled == true {
+                print("RESULT: User canceled Facebook Authentication")
+                
+            } else {
+                print("RESULT: Authentication successful")
+                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                self.firebaseAuthentication(credential)
+            }
+        }
+    }
+    
+    func firebaseAuthentication(_ credential: FIRAuthCredential) {
+        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+            if error != nil {
+                print("RESULT: Unable to authenticate with Firebase -\(error)")
+            } else {
+                print("RESULT: Succesfully autheticated with Firebase")
+            }
+        })
+    }
        
         
 }
