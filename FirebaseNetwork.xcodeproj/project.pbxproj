@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E032B4E1E24EE3E000E809A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E032B4D1E24EE3D000E809A /* PostCell.swift */; };
+		5E032B511E24FF90000E809A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E032B501E24FF90000E809A /* DataService.swift */; };
 		5E3844DF1E0C1838009B4CE4 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3844DE1E0C1838009B4CE4 /* FeedVC.swift */; };
 		5E46B6951DE86FA000917868 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E46B6941DE86FA000917868 /* GoogleService-Info.plist */; };
 		5E46B6981DE88E6D00917868 /* MankSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E46B6971DE88E6D00917868 /* MankSans-Medium.ttf */; };
@@ -33,6 +34,7 @@
 		29356B06549C4E69CA2C1B3F /* Pods-FirebaseNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseNetwork/Pods-FirebaseNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		459EC6D8BE62D1D89C22EAA7 /* Pods-FirebaseNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseNetwork/Pods-FirebaseNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		5E032B4D1E24EE3D000E809A /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		5E032B501E24FF90000E809A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		5E3844DE1E0C1838009B4CE4 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		5E46B6941DE86FA000917868 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E46B6971DE88E6D00917868 /* MankSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MankSans-Medium.ttf"; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E032B4F1E24FF63000E809A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5E032B501E24FF90000E809A /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		5E46B6961DE88E5500917868 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 		5E5BCE5D1DE7A7E700ECB28E /* FirebaseNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				5E032B4F1E24FF63000E809A /* Services */,
 				5E46B69B1DE89FD800917868 /* FirebaseNetwork.entitlements */,
 				5E46B6961DE88E5500917868 /* Resources */,
 				5E5BCE7E1DE8537600ECB28E /* Frameworks */,
@@ -320,6 +331,7 @@
 				5E3844DF1E0C1838009B4CE4 /* FeedVC.swift in Sources */,
 				5E5BCE741DE7A83800ECB28E /* MaterialView.swift in Sources */,
 				5E5BCE611DE7A7E700ECB28E /* ViewController.swift in Sources */,
+				5E032B511E24FF90000E809A /* DataService.swift in Sources */,
 				5E5BCE761DE7A85300ECB28E /* MaterialButton.swift in Sources */,
 				5E9A3FF61E23A4AE0080CB23 /* RoundBtn.swift in Sources */,
 				5E5BCE5F1DE7A7E700ECB28E /* AppDelegate.swift in Sources */,
