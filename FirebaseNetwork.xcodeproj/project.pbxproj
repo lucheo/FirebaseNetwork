@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E032B4E1E24EE3E000E809A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E032B4D1E24EE3D000E809A /* PostCell.swift */; };
 		5E3844DF1E0C1838009B4CE4 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3844DE1E0C1838009B4CE4 /* FeedVC.swift */; };
 		5E46B6951DE86FA000917868 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E46B6941DE86FA000917868 /* GoogleService-Info.plist */; };
 		5E46B6981DE88E6D00917868 /* MankSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E46B6971DE88E6D00917868 /* MankSans-Medium.ttf */; };
@@ -23,12 +24,15 @@
 		5E5BCE821DE853D600ECB28E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5BCE7F1DE853D600ECB28E /* Bolts.framework */; };
 		5E5BCE831DE853D700ECB28E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5BCE801DE853D600ECB28E /* FBSDKCoreKit.framework */; };
 		5E5BCE841DE853D700ECB28E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5BCE811DE853D600ECB28E /* FBSDKLoginKit.framework */; };
+		5E9A3FF41E216F020080CB23 /* CircleImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A3FF31E216F020080CB23 /* CircleImgView.swift */; };
+		5E9A3FF61E23A4AE0080CB23 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A3FF51E23A4AE0080CB23 /* RoundBtn.swift */; };
 		B6706FC44E6335B617A00925 /* Pods_FirebaseNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A8FBD501774F9D3483AEAB /* Pods_FirebaseNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		29356B06549C4E69CA2C1B3F /* Pods-FirebaseNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseNetwork/Pods-FirebaseNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		459EC6D8BE62D1D89C22EAA7 /* Pods-FirebaseNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseNetwork/Pods-FirebaseNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		5E032B4D1E24EE3D000E809A /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5E3844DE1E0C1838009B4CE4 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		5E46B6941DE86FA000917868 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E46B6971DE88E6D00917868 /* MankSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MankSans-Medium.ttf"; sourceTree = "<group>"; };
@@ -48,6 +52,8 @@
 		5E5BCE7F1DE853D600ECB28E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		5E5BCE801DE853D600ECB28E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		5E5BCE811DE853D600ECB28E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		5E9A3FF31E216F020080CB23 /* CircleImgView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImgView.swift; sourceTree = "<group>"; };
+		5E9A3FF51E23A4AE0080CB23 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		97A8FBD501774F9D3483AEAB /* Pods_FirebaseNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +132,9 @@
 				5E5BCE731DE7A83800ECB28E /* MaterialView.swift */,
 				5E5BCE751DE7A85300ECB28E /* MaterialButton.swift */,
 				5E5BCE7C1DE7AD1E00ECB28E /* MaterialTextField.swift */,
+				5E9A3FF31E216F020080CB23 /* CircleImgView.swift */,
+				5E9A3FF51E23A4AE0080CB23 /* RoundBtn.swift */,
+				5E032B4D1E24EE3D000E809A /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -306,13 +315,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E9A3FF41E216F020080CB23 /* CircleImgView.swift in Sources */,
 				5E5BCE7D1DE7AD1E00ECB28E /* MaterialTextField.swift in Sources */,
 				5E3844DF1E0C1838009B4CE4 /* FeedVC.swift in Sources */,
 				5E5BCE741DE7A83800ECB28E /* MaterialView.swift in Sources */,
 				5E5BCE611DE7A7E700ECB28E /* ViewController.swift in Sources */,
 				5E5BCE761DE7A85300ECB28E /* MaterialButton.swift in Sources */,
+				5E9A3FF61E23A4AE0080CB23 /* RoundBtn.swift in Sources */,
 				5E5BCE5F1DE7A7E700ECB28E /* AppDelegate.swift in Sources */,
 				5E5BCE7B1DE7AAF700ECB28E /* Constants.swift in Sources */,
+				5E032B4E1E24EE3E000E809A /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

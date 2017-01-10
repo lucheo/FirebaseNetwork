@@ -26,8 +26,9 @@ class ViewController: UIViewController {
             }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("RESULT: ID found in Keychain")
+        
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            print("RESULT: ID found in Keychain")
             performSegue(withIdentifier: "goToFeed", sender: nil)
         }
         
@@ -38,6 +39,33 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func signInBtnPressed(_ sender: Any) {
+        if let email = emailField.text, let password = passwordField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                if error == nil{
+                    print("RESULT: Succesfully signed in user")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
+                    
+                } else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                        if error == nil {
+                            print("RESULT: Succesfully created new user")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
+                            
+                        }
+                    })
+                }
+            })
+        } else {
+            ShowErrorAlert()
+        }
     }
     
     @IBAction func fbBtnPressed(_ sender: UIButton) {
@@ -80,34 +108,6 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func signInTapped(_ sender: Any) {
-        if let email = emailField.text, let password = passwordField.text {
-            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
-                if error == nil {
-                    print("RESULT: Succesfully signed in user")
-                    if let user = user {
-                        self.completeSignIn(id: user.uid)
-                    }
-
-                } else {
-                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
-                        if error == nil {
-                            print("RESULT: Succesfully created new user")
-                            if let user = user{
-                                self.completeSignIn(id: user.uid)
-                            }
-                        }
-                        
-                    })
-                }
-            })
-            
-        } else {
-            ShowErrorAlert()
-            
-            
-        }
-    }
     
     func completeSignIn(id: String) {
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
