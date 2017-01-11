@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -194,13 +194,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SJT-6E-e4q">
                                         <rect key="frame" x="8" y="8" width="327" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="SGi-y4-Xbf" customClass="CircleImgView" customModule="FirebaseNetwork" customModuleProvider="target">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="SGi-y4-Xbf" customClass="CircleImgView" customModule="FirebaseNetwork" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.47058823529411764" green="0.56470588235294117" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="ccr-m0-HMW"/>
                                                     <constraint firstAttribute="width" constant="49" id="xjx-GA-f3M"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="rnt-sW-eig" appends="YES" id="eMX-Ox-sVU"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add caption" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UgM-kJ-8vJ" customClass="MaterialTextField" customModule="FirebaseNetwork" customModuleProvider="target">
                                                 <rect key="frame" x="59" y="0.0" width="209" height="49"/>
@@ -361,11 +365,26 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addImage" destination="SGi-y4-Xbf" id="psP-nG-Dxy"/>
                         <outlet property="mainTable" destination="5fE-yr-bx2" id="Z55-IN-z1X"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="mdr-UQ-wuY"/>
                     </connections>
                 </viewController>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="xsJ-aY-wHv" customClass="CircleImgView" customModule="FirebaseNetwork" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                    <color key="backgroundColor" red="0.47058823529999999" green="0.56470588239999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="8MJ-Sv-XnE"/>
+                        <constraint firstAttribute="height" constant="49" id="a0r-I2-3Nr"/>
+                    </constraints>
+                </imageView>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMO-KA-bsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rnt-sW-eig">
+                    <connections>
+                        <action selector="selectImageTapped:" destination="K5p-Tt-VVO" id="TDg-0b-Aa5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="940" y="37.331334332833585"/>
         </scene>
